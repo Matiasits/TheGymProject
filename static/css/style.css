@@ -1,0 +1,14 @@
+
+section {
+    position: relative;
+    margin: 20px auto;
+}
+
+aside{
+    position: absolute;
+}
+
+
+#left{
+    margin-left: auto;
+}

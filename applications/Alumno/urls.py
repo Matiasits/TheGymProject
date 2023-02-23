@@ -40,7 +40,7 @@ urlpatterns = [
     ),
     path(
         "alumno/delete/<pk>",
-        views.AlumnoUpdateView.as_view(),
+        views.AlumnoDeleteView.as_view(),
         name="Borrar Alumno"
     ),
 ]

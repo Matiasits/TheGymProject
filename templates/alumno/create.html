@@ -1,16 +1,14 @@
-
-
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="text-center display-4 font-weight-bold font-italic">Alta de Clientes</h1>
+<h1 class="text-center display-4 font-weight-bold font-italic">Alta de Alumnos</h1>
 
 <form method="POST">{% csrf_token %}    <!-- Permite prevenir falsificaciónes de solicitudes entre sitios.-->
     <div class="alert alert-info">
         <div clas="row m-7 justify-content-center align-items-center">
             <strong>Informacion:</strong> 
             <br>
-            Procure completar todos los campos para tener una informacion completa de cada cliente
+            Procure completar todos los campos para tener una informacion completa de cada alumno
         </div>
     </div>
     

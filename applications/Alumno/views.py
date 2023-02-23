@@ -61,8 +61,8 @@ class LogoutView(View):
 ############################ VIEWS ####################################
 class AlumnoDetail(LoginRequiredMixin,DetailView):  #DETALLES
     model = Alumno
-    template_name = "alumno/detalles.html"
-    context_object_name = "detalle"
+    template_name = "alumno/detail.html"
+    context_object_name = "detail"
     login_url = reverse_lazy('alumno_app:login-alumno')
 
 
