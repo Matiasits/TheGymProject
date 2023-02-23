@@ -1,0 +1,29 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center display-4 font-weight-bold font-italic">Alta de Clientes</h1>
+
+<form method="POST">{% csrf_token %}    <!-- Permite prevenir falsificaciónes de solicitudes entre sitios.-->
+    <div class="alert alert-info">
+        <div clas="row m-7 justify-content-center align-items-center">
+            <strong>Informacion:</strong> 
+            <br>
+            Procure completar todos los campos para tener una informacion completa de cada cliente
+        </div>
+    </div>
+    
+    <div class="row mt-5 justify-content-center align-items-center">
+        <table>
+            {{form.as_table}}
+        </table>
+    </div>
+
+    <div class="row m-0 justify-content-center mt-4">
+        <button class="btn btn-primary text-dark row col-3" type="submit" data-toggle="tooltip" data-placement="right" title="Agregar"><i class="fa-solid fa-user-plus"></i></button>
+    </div>
+
+</form>
+
+{% endblock content %}
