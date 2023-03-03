@@ -39,5 +39,5 @@ urlpatterns = [
         "rutina/delete/<pk>",
         views.RutinaDeleteView.as_view(),
         name="Borrar Rutina"
-    ),   
+    ),
 ]

@@ -73,30 +73,14 @@ class RutinaCreateView(LoginRequiredMixin,CreateView):    #CREACION
     template_name = "rutina/create.html"
     form_class = RutinaForm
     login_url = reverse_lazy('rutina_app:login-rutina')
-    success_url = reverse_lazy('rutina_app:panel-rutina')
-    
-
-    def form_valid(self, form):
-        rutina = form.save(commit=False)
-        rutina.nombre_completo = f"{rutina.nombre} {rutina.apellido}"
-        rutina.save()
-
-        return super(RutinaCreateView, self).form_valid(form)
-    
+    success_url = reverse_lazy('rutina_app:panel-Creacion de Rutina')    
     
 class RutinaUpdateView(LoginRequiredMixin,UpdateView):    #ACTUALIZACION
     model = Rutina
     template_name = "rutina/update.html"
     form_class = RutinaForm
     login_url = reverse_lazy('rutina_app:login-rutina')
-    success_url = reverse_lazy('rutina_app:panel-rutina')
-
-    def form_valid(self, form):
-        rutina = form.save(commit=False)
-        rutina.nombre_completo = f"{rutina.nombre} {rutina.apellido}"
-        rutina.save()
-
-        return super(RutinaUpdateView, self).form_valid(form)
+    success_url = reverse_lazy('rutina_app:Modificar Rutina')
 
 
 class RutinaDeleteView(LoginRequiredMixin,DeleteView,DetailView):
@@ -104,4 +88,5 @@ class RutinaDeleteView(LoginRequiredMixin,DeleteView,DetailView):
     template_name = "rutina/delete.html"
     context_object_name = "delete_detail"
     login_url = reverse_lazy('rutina_app:login-rutina')
-    success_url = reverse_lazy('rutina_app:panel-rutina')
+    success_url = reverse_lazy('rutina_app:Borrar Rutina')
+    

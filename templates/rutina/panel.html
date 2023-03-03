@@ -62,12 +62,13 @@
                 <td>{{rutina.jueves}}</td>
                 <td>{{rutina.viernes}}</td>
                 <td>{{rutina.sabado}}</td>
+                
                 <td>
                     <div class="dropdown dropright">
                     
-                    <button type="button" class="btn btn-outline-warning btn-sm dropdown-toggle" data-toggle="dropdown"> 
-                    Accion
-                    </button>
+                        <button type="button" class="btn btn-outline-warning btn-sm dropdown-toggle" data-toggle="dropdown"> 
+                        Accion
+                        </button>
                     
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{% url 'rutina_app:Modificar Rutina' rutina.identificador_rutina%}">Modificar</a>

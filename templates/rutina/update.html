@@ -2,15 +2,15 @@
 {% load static %}
 
 {% block content %}
-<h1 class="text-center display-4 font-weight-bold font-italic">Modificacion de Entrenadores</h1>
+<h1 class="text-center display-4 font-weight-bold font-italic">Modificacion de Rutina</h1>
 
 <div class="alert alert-info">
     <div clas="row m-7 justify-content-center align-items-center">
         <strong>Informacion:</strong> 
         <br>
-        Al modificar el DNI de un entrenador, debera tener en cuenta que se creara otro entrenador con el nuevo DNI modificado. 
+        Al modificar el Identificador de una Rutina, debera tener en cuenta que se creara otra Rutina con el nuevo Identificador modificado. 
         <br>
-        Se recomienda eliminar al alumno con DNI obsoleto.
+        Se recomienda eliminar la Rutina con Identificador obsoleto.
     </div>
 </div>
  
@@ -18,8 +18,6 @@
 <div class="row mt-3 justify-content-center">
     <div class="card" style="width: 500px;">
         
-        <img class="card-img-top" src="{% static 'images/user.png' %}" alt="Card image">
-
         <div class="card-body">            
             <form method="POST">{% csrf_token %}    <!-- Permite prevenir falsificaciónes de solicitudes entre sitios.-->
                 <table>
