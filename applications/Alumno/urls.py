@@ -7,7 +7,6 @@ from . import views
 app_name = 'alumno_app'
 
 urlpatterns = [
-    
     path(
         'alumno/create/', #se detalla que registro segun su clave primaria desea detallar
         views.AlumnoCreateView.as_view(),

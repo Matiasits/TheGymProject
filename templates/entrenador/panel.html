@@ -13,7 +13,7 @@
         
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'alumno_app:Creacion de Alumno'%}">DAR DE ALTA</a>
+                <a class="nav-link" href="{% url 'entrenador_app:Creacion de Entrenador'%}">DAR DE ALTA</a>
             </li>   
 
         </ul>
@@ -23,7 +23,7 @@
             <input class="form-control" type="text" placeholder="Buscar" id="dato" name="dato">
             <button class="btn btn-lg btn-success fa-solid fa-magnifying-glass" type="submit" data-toggle="tooltip" data-placement="right" title="Buscar"></button>
         </form>        
-           <a class="fa-solid fa-circle-xmark btn btn-danger btn-lg" type="submit" href="{% url 'alumno_app:logout-alumno'%}"  data-toggle="tooltip" data-placement="right" title="Salir"></a>
+           <a class="fa-solid fa-circle-xmark btn btn-danger btn-lg" type="submit" href="{% url 'entrenador_app:logout-entrenador'%}"  data-toggle="tooltip" data-placement="right" title="Salir"></a>
 
 
     </div>
@@ -40,25 +40,19 @@
                 <th>DNI</th>
                 <th>NOMBRE</th>
                 <th>APELLIDO</th>
-                <th>FECHA ABONADA</th>
-                <th>PLAN</th>
-                <th>RUTINA</th>
-                <th>ACCIONES</th>
+                <th>TELEFONO</th>
             </tr>
         </thead>
     
-
         <tbody>
             
-            {% for alumno in alumnos %}
+            {% for entrenador in entrenador %}
 
             <tr>
-                <td>{{alumno.dni}}</td>
-                <td>{{alumno.nombre}}</td>
-                <td>{{alumno.apellido}}</td>
-                <td>{{alumno.fecha_abonada}}</td>
-                <td>{{alumno.plan}}</td>
-                <td>{{alumno.rutina}}</td>
+                <td>{{entrenador.dni}}</td>
+                <td>{{entrenador.nombre}}</td>
+                <td>{{entrenador.apellido}}</td>
+                <td>{{entrenador.telefono}}</td>
                 <td>
                     <div class="dropdown dropright">
                     
@@ -67,9 +61,9 @@
                     </button>
                     
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{% url 'alumno_app:Modificar Alumno' alumno.dni%}">Modificar</a>
-                            <a class="dropdown-item" href="{% url 'alumno_app:Detalles de Alumno' alumno.dni%}">Detalles</a>
-                            <a class="dropdown-item" href="{% url 'alumno_app:Borrar Alumno' alumno.dni%}">Borrar</a>
+                            <a class="dropdown-item" href="{% url 'entrenador_app:Modificar Entrenador' entrenador.dni%}">Modificar</a>
+                            <a class="dropdown-item" href="{% url 'entrenador_app:Detalles de Entrenador' entrenador.dni%}">Detalles</a>
+                            <a class="dropdown-item" href="{% url 'entrenador_app:Borrar Entrenador' entrenador.dni%}">Borrar</a>
                         </div>
                     </div>
                 </td>
@@ -78,8 +72,7 @@
             {% endfor %}
         
         </tbody>
-        
-        
+            
   </table>
     
 </div>

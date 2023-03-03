@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<h3 class="text-center display-4 font-weight-bold font-italic">DETALLES DE ENTRENADORES</h3>
+
+<div class="row mt-3 justify-content-center">
+    
+    <div class="card mt-5" style="width: 400px;">
+
+        <div class="card-body">
+            
+            <p class="card-text">DNI: {{detail.identificador_rutina}}</p>
+            <p class="card-text">Tipo: {{detail.tipo}}</p> 
+            <p class="card-text">Lunes: {{detail.lunes}}</p>
+            <p class="card-text">Martes: {{detail.martes}}</p>
+            <p class="card-text">Miercoles: {{detail.miercoles}}</p>
+            <p class="card-text">Jueves: {{detail.jueves}}</p>
+            <p class="card-text">Viernes: {{detail.viernes}}</p>
+            <p class="card-text">Sabado: {{detail.sabado}}</p>
+            
+            <a href="{% url 'entrenador_app:panel-entrenador' %}" class="fa-solid fa-rotate-left btn btn-primary row col-10 ml-4 "></a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

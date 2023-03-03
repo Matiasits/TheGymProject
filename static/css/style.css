@@ -1,14 +1,45 @@
-
-section {
-    position: relative;
-    margin: 20px auto;
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
-aside{
-    position: absolute;
+.pantalla #titulo{
+    grid-column: 1 / 7;
+    grid-row: 1;
+    text-align: center;
+    background-color: lightcoral;
+}
+
+.pantalla #nav{
+    grid-column: 1 / 2;
+    grid-row: 2;
+    height: 100%;
+}
+
+.pantalla #nav #logo img{
+    width: 100%;
+}
+
+.pantalla #nav ul{
+    margin-top: 110px;
+    width: 100%;
+    height: 100%;
 }
 
 
-#left{
-    margin-left: auto;
+.pantalla #cuerpo{
+    grid-column: 2 / 7;
+    grid-row: 2;
+    height: 100%;
+    justify-content: center;
 }
+
+.pantalla{
+    display: grid;
+    grid-template-columns: 200px auto ;
+    grid-template-rows: 100px auto ;
+    height: 100%;
+    width: 100%;
+}
+
+

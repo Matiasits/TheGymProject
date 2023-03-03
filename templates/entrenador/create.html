@@ -4,14 +4,14 @@
 {% block content %}
 
 
-<h2 class="text-center font-weight-bold font-italic">Alta de Alumnos</h2>
+<h2 class="text-center font-weight-bold font-italic">Alta de Entrenadores</h2>
 
 <form method="POST">{% csrf_token %}    <!-- Permite prevenir falsificaciónes de solicitudes entre sitios.-->
         <div class="alert alert-info" id="advertencia">
             <div clas="row m-7 justify-content-center align-items-center">
                 <strong>Informacion:</strong> 
                 <br>
-                Procure completar todos los campos para tener una informacion completa de cada alumno
+                Procure completar todos los campos para tener una informacion completa de cada entrenador
             </div>
         </div>
         
@@ -25,7 +25,7 @@
             <button class="btn btn-primary text-dark row col-3" type="submit" data-toggle="tooltip" data-placement="right" title="Agregar"><i class="fa-solid fa-user-plus"></i></button>
         </div>
         <div class="row m-0 justify-content-center mt-4">
-            <a href="{% url 'alumno_app:panel-alumno'%}" class="fa-solid fa-rotate-left btn btn-primary row col-3"></a>
+            <a href="{% url 'entrenador_app:panel-entrenador'%}" class="fa-solid fa-rotate-left btn btn-primary row col-3"></a>
         </div>
         
 

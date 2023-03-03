@@ -13,7 +13,7 @@
         
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'alumno_app:Creacion de Alumno'%}">DAR DE ALTA</a>
+                <a class="nav-link" href="{% url 'rutina_app:Creacion de Rutina'%}">DAR DE ALTA</a>
             </li>   
 
         </ul>
@@ -23,7 +23,7 @@
             <input class="form-control" type="text" placeholder="Buscar" id="dato" name="dato">
             <button class="btn btn-lg btn-success fa-solid fa-magnifying-glass" type="submit" data-toggle="tooltip" data-placement="right" title="Buscar"></button>
         </form>        
-           <a class="fa-solid fa-circle-xmark btn btn-danger btn-lg" type="submit" href="{% url 'alumno_app:logout-alumno'%}"  data-toggle="tooltip" data-placement="right" title="Salir"></a>
+           <a class="fa-solid fa-circle-xmark btn btn-danger btn-lg" type="submit" href="{% url 'rutina_app:logout-rutina'%}"  data-toggle="tooltip" data-placement="right" title="Salir"></a>
 
 
     </div>
@@ -37,28 +37,31 @@
     <table class="table table-dark table-hover table-wrapper-scroll-y">
         <thead>
             <tr>
-                <th>DNI</th>
-                <th>NOMBRE</th>
-                <th>APELLIDO</th>
-                <th>FECHA ABONADA</th>
-                <th>PLAN</th>
-                <th>RUTINA</th>
-                <th>ACCIONES</th>
+                <th>IDENTIFICADOR</th>
+                <th>TIPO</th>
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIERCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+                <th>SABADO</th>
+                
             </tr>
         </thead>
     
-
         <tbody>
             
-            {% for alumno in alumnos %}
+            {% for rutina in rutina %}
 
             <tr>
-                <td>{{alumno.dni}}</td>
-                <td>{{alumno.nombre}}</td>
-                <td>{{alumno.apellido}}</td>
-                <td>{{alumno.fecha_abonada}}</td>
-                <td>{{alumno.plan}}</td>
-                <td>{{alumno.rutina}}</td>
+                <td>{{rutina.identificador_rutina}}</td>
+                <td>{{rutina.tipo}}</td>
+                <td>{{rutina.lunes}}</td>
+                <td><a href="{% url 'entrenador_app:panel-entrenador' %}">a</a></td>
+                <td>{{rutina.miercoles}}</td>
+                <td>{{rutina.jueves}}</td>
+                <td>{{rutina.viernes}}</td>
+                <td>{{rutina.sabado}}</td>
                 <td>
                     <div class="dropdown dropright">
                     
@@ -67,9 +70,9 @@
                     </button>
                     
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{% url 'alumno_app:Modificar Alumno' alumno.dni%}">Modificar</a>
-                            <a class="dropdown-item" href="{% url 'alumno_app:Detalles de Alumno' alumno.dni%}">Detalles</a>
-                            <a class="dropdown-item" href="{% url 'alumno_app:Borrar Alumno' alumno.dni%}">Borrar</a>
+                            <a class="dropdown-item" href="{% url 'rutina_app:Modificar Rutina' rutina.identificador_rutina%}">Modificar</a>
+                            <a class="dropdown-item" href="{% url 'rutina_app:Detalles de Rutina' rutina.identificador_rutina%}">Detalles</a>
+                            <a class="dropdown-item" href="{% url 'rutina_app:Borrar Rutina' rutina.identificador_rutina%}">Borrar</a>
                         </div>
                     </div>
                 </td>
@@ -78,8 +81,7 @@
             {% endfor %}
         
         </tbody>
-        
-        
+            
   </table>
     
 </div>
