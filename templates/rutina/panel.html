@@ -56,13 +56,39 @@
             <tr>
                 <td>{{rutina.identificador_rutina}}</td>
                 <td>{{rutina.tipo}}</td>
-                <td>{{rutina.lunes}}</td>
-                <td><a href="{% url 'entrenador_app:panel-entrenador' %}">a</a></td>
-                <td>{{rutina.miercoles}}</td>
-                <td>{{rutina.jueves}}</td>
-                <td>{{rutina.viernes}}</td>
-                <td>{{rutina.sabado}}</td>
                 
+                <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{rutina.lunes}}">
+                        Ver Ejercicios
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{rutina.martes}}">
+                        Ver Ejercicios
+                    </button>
+                </td>
+        
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{rutina.miercoles}}">
+                        Ver Ejercicios
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{rutina.jueves}}">
+                        Ver Ejercicios
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{rutina.viernes}}">
+                        Ver Ejercicios
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{rutina.sabado}}">
+                        Ver Ejercicios
+                    </button>
+                </td>
                 <td>
                     <div class="dropdown dropright">
                     
@@ -78,7 +104,89 @@
                     </div>
                 </td>
             </tr>
-        
+            
+
+            <div class="modal fade" id="{{rutina.lunes}}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>{{rutina.lunes}}</p>         
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="{{rutina.martes}}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>{{rutina.martes}}</p>         
+                        </div>      
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="{{rutina.miercoles}}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>{{rutina.miercoles}}</p>         
+                        </div>      
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="{{rutina.jueves}}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>{{rutina.jueves}}</p>         
+                        </div>      
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="{{rutina.viernes}}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>{{rutina.viernes}}</p>         
+                        </div>      
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="{{rutina.sabado}}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>{{rutina.sabado}}</p>         
+                        </div>      
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {% endfor %}
         
         </tbody>

@@ -4,7 +4,7 @@ class Rutina(models.Model):
 
     identificador_rutina = models.IntegerField(primary_key=True)
     tipo = models.CharField("tipo de ejercicios", max_length=50)
-    lunes = models.CharField("lunes", max_length=1000,default='Sin ejercicio')
+    lunes = models.TextField("lunes", max_length=1000,default='Sin ejercicio')
     martes = models.CharField("martes", max_length=1000,default='Sin ejercicio')
     miercoles = models.CharField("miercoles", max_length=1000,default='Sin ejercicio')
     jueves = models.CharField("jueves", max_length=1000,default='Sin ejercicio')

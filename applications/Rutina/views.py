@@ -73,14 +73,14 @@ class RutinaCreateView(LoginRequiredMixin,CreateView):    #CREACION
     template_name = "rutina/create.html"
     form_class = RutinaForm
     login_url = reverse_lazy('rutina_app:login-rutina')
-    success_url = reverse_lazy('rutina_app:panel-Creacion de Rutina')    
+    success_url = reverse_lazy('rutina_app:panel-rutina')    
     
 class RutinaUpdateView(LoginRequiredMixin,UpdateView):    #ACTUALIZACION
     model = Rutina
     template_name = "rutina/update.html"
     form_class = RutinaForm
     login_url = reverse_lazy('rutina_app:login-rutina')
-    success_url = reverse_lazy('rutina_app:Modificar Rutina')
+    success_url = reverse_lazy('rutina_app:panel-rutina')
 
 
 class RutinaDeleteView(LoginRequiredMixin,DeleteView,DetailView):
@@ -88,5 +88,5 @@ class RutinaDeleteView(LoginRequiredMixin,DeleteView,DetailView):
     template_name = "rutina/delete.html"
     context_object_name = "delete_detail"
     login_url = reverse_lazy('rutina_app:login-rutina')
-    success_url = reverse_lazy('rutina_app:Borrar Rutina')
+    success_url = reverse_lazy('rutina_app:panel-rutina')
     
